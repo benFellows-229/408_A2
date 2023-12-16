@@ -1,3 +1,5 @@
+# Basic test ui with error handling and input validation nested into functions
+
 from db import *
 import re
 
@@ -30,6 +32,7 @@ def ui(conn):
         else:
             print('\nPlease enter a number 1-6 to select your option\n')
 
+
 def list_all_products(conn):
     try:
         cursor = conn.cursor()
@@ -41,6 +44,7 @@ def list_all_products(conn):
         print()
     except mysql.connector.Error as e:
         print("Failed to list all products {}".format(e))
+
 
 def find_total_orders(conn):
     try:
@@ -57,6 +61,7 @@ def find_total_orders(conn):
         print()
     except mysql.connector.Error as e:
         print("Failed to find total orders {}".format(e))
+
 
 def display_details(conn):
     try:
@@ -79,6 +84,7 @@ def display_details(conn):
     except mysql.connector.Error as e:
         print("Failed to display details {}".format(e))
 
+
 def list_products(conn):
     try:
         cursor = conn.cursor()
@@ -96,6 +102,7 @@ def list_products(conn):
         print()
     except mysql.connector.Error as e:
         print("Failed to list products {}".format(e))
+
 
 def show_revenue(conn):
     try:

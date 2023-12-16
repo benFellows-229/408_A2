@@ -1,3 +1,5 @@
+
+
 import mysql.connector
 
 
@@ -13,6 +15,7 @@ def connect_db():
         return conn
     except mysql.connector.Error as e:
         print("Failed to connect to MySQL table {}".format(e))
+
 
 def close_db(conn):
     conn.close()

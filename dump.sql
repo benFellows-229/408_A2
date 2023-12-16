@@ -133,7 +133,7 @@ CREATE TABLE `Products` (
 
 LOCK TABLES `Products` WRITE;
 /*!40000 ALTER TABLE `Products` DISABLE KEYS */;
-INSERT INTO `Products` VALUES (1,'Bamboo Toothbrush',1,'Personal Care',2.99,95),(2,'Reusable Water Bottle',1,'Outdoor',10.50,195),(3,'Organic Cotton T-shirt',2,'Clothing',15.99,145),(4,'Organic Hand Soap',4,'Personal Care',6.99,45),(5,'Recycled Paper Notebooks',5,'Stationery',3.50,95),(6,'Eco-friendly Laundry Detergent',6,'Home Care',12.99,25),(7,'Solar Garden Lights',7,'Outdoor',22.50,35),(8,'Reusable Silicone Bags',8,'Kitchen',9.99,75),(9,'Biodegradable Plant Pots',9,'Gardening',4.99,65),(10,'Sustainable Wooden Sunglasses',10,'Accessories',29.99,55),(11,'Solar Powered Lantern',3,'Outdoor',20.99,-5),(12,'peepee poopoo',3,'Outdoor',20.99,-5);
+INSERT INTO `Products` VALUES (1,'Bamboo Toothbrush',1,'Personal Care',2.99,95),(2,'Reusable Water Bottle',1,'Outdoor',10.50,195),(3,'Organic Cotton T-shirt',2,'Clothing',15.99,145),(4,'Organic Hand Soap',4,'Personal Care',6.99,45),(5,'Recycled Paper Notebooks',5,'Stationery',3.50,95),(6,'Eco-friendly Laundry Detergent',6,'Home Care',12.99,25),(7,'Solar Garden Lights',7,'Outdoor',22.50,0),(8,'Reusable Silicone Bags',8,'Kitchen',9.99,75),(9,'Biodegradable Plant Pots',9,'Gardening',4.99,65),(10,'Sustainable Wooden Sunglasses',10,'Accessories',29.99,55),(11,'Solar Powered Lantern',3,'Outdoor',20.99,0);
 /*!40000 ALTER TABLE `Products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -176,7 +176,8 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-12-15 19:23:36
+-- Dump completed on 2023-12-15 19:53:33
+
 
 create
     definer = root@`%` procedure AddNewOrder(IN customerID int, IN orderDate date, IN shipDate date,
